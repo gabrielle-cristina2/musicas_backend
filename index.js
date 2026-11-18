@@ -44,9 +44,6 @@ app.post("/cadastrar", (request, response) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log("Servidor rodando na porta 3000!")
-})
 app.delete("/apagar/:id", (request, response) => {
     const { id } = request.params
 
@@ -91,4 +88,9 @@ app.put("/editar/:id", (request, response) => {
         response.json({ mensagem: "Música alterada com sucesso!" })
     })
 })
+
+app.listen(3000, () => {
+    console.log("Servidor rodando na porta 3000!")
+})
+
 export default app
